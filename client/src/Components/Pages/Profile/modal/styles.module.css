@@ -1,0 +1,3 @@
+.editProfile {
+  @apply flex flex-col p-5 bg-white bg-opacity-80 rounded-xl;
+}

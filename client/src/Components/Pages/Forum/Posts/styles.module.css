@@ -1,0 +1,27 @@
+.post {
+  @apply w-3/4 p-10 mx-auto mt-10 text-center border border-black shadow-xl rounded-xl shadow-gray-400;
+}
+
+.post h1 {
+  @apply text-2xl underline underline-offset-8;
+}
+
+.post p {
+  @apply mt-5;
+}
+
+.post__buttonComment {
+  @apply flex justify-between w-3/4 mx-auto;
+}
+
+.post__buttonComment button {
+  @apply flex p-3 mx-auto mt-10 bg-blue-300 border border-black shadow-lg rounded-xl shadow-gray-500;
+}
+
+.post__comments {
+  @apply w-3/4 p-5 mx-auto mt-10 text-center;
+}
+
+.post__comment {
+  @apply p-2 mt-2 even:bg-gray-100 rounded-xl;
+}

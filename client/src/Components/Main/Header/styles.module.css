@@ -1,0 +1,23 @@
+.header {
+  @apply flex
+}
+
+.header__logo {
+  @apply flex my-auto absolute ml-5
+}
+
+.header__logo nav{
+ @apply my-auto flex 
+}
+
+.header__logo a {
+  @apply ml-5
+}
+
+.header__title {
+  @apply mx-auto my-auto text-4xl;
+}
+
+.header__login {
+  @apply my-auto mr-6 mt-5 text-2xl;
+}

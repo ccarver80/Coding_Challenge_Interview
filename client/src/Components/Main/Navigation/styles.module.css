@@ -1,0 +1,11 @@
+.navigation {
+    @apply flex text-xl mx-auto w-1/2 
+}
+
+.navigation nav {
+    @apply flex justify-between w-full
+}
+
+.navigation a{
+    @apply hover:bg-pink-200 p-2 rounded-xl font-bold underline underline-offset-4
+}

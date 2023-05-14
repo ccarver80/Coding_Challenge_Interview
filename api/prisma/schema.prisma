@@ -1,0 +1,94 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// 
+// *************USER SECTION ************
+//
+
+model User {
+  rec_id     Int            @id @default(autoincrement())
+  username   String         @unique
+  password   String
+  email      String         @unique
+  is_paid    Boolean        @default(false)
+  opt_in     Boolean        @default(false)
+  location   String?        @default("No Location yet.")
+  bio        String?        @default("No bio yet.") 
+  hobbies    String?        @default("No hobbies yet.") 
+  profilePic String?
+  createdAt  DateTime       @default(now())
+  updatedAt  DateTime       @updatedAt
+  posts      FourmPost[]
+  comments   FourmComment[]
+  library Library[]
+}
+
+// 
+// *********FOURM SECTION **************************
+// 
+
+model FourmCatagory {
+  rec_id       Int         @id @default(autoincrement())
+  name         String      @unique
+  description  String
+  is_paid_feat Boolean     @default(false)
+  topic        FourmPost[]
+}
+
+model FourmPost {
+  rec_id      Int            @id @default(autoincrement())
+  title       String
+  content     String         
+  createdAt   String
+  updatedAt   DateTime       @updatedAt
+  authorid    Int
+  author      User           @relation(fields: [authorid], references: [rec_id])
+  catagory_Id Int
+  catagory    FourmCatagory  @relation(fields: [catagory_Id], references: [rec_id])
+  comment     FourmComment[]
+  reported    ReportedPost[]
+}
+
+model FourmComment {
+  rec_id    Int       @id @default(autoincrement())
+  comment   String    
+  createdAt String
+  updatedAt DateTime  @updatedAt
+  authorid  Int
+  author    User      @relation(fields: [authorid], references: [rec_id])
+  postid    Int
+  post      FourmPost @relation(fields: [postid], references: [rec_id])
+}
+
+model ReportedPost {
+  rec_id    Int       @id @default(autoincrement())
+  postid    Int
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  post      FourmPost @relation(fields: [postid], references: [rec_id])
+  reason    String
+}
+
+model ReasonList {
+  rec_id Int    @id @default(autoincrement())
+  reason String
+}
+
+
+model Library {
+  rec_id Int @id @default(autoincrement())
+  title String
+  description String
+  rating Int
+  userId Int
+  user User @relation(fields: [userId], references: [rec_id])
+}

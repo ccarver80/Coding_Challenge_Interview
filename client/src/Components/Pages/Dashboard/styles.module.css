@@ -1,0 +1,11 @@
+.dashboard {
+    @apply h-screen flex flex-col
+}
+
+.dashboard__main {
+    @apply flex mx-auto h-full
+}
+
+.dashboard__main input {
+    @apply border border-black rounded mt-10
+}

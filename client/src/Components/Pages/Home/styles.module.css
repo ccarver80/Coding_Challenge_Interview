@@ -1,0 +1,55 @@
+.home {
+  @apply h-screen flex flex-col 
+}
+
+.home__logInButton {
+  @apply w-fit place-self-end shadow-gray-500 shadow-xl top-0 right-0 mt-10 mr-10 bg-medium_purple p-5 rounded-xl text-2xl text-white
+}
+
+.home__header {
+  @apply flex z-10 px-10;
+}
+
+.home__title {
+  @apply mx-auto text-center h-fit;
+}
+
+.home__title h1 {
+  @apply font-serif text-6xl;
+}
+
+.home__title h2 {
+  @apply mt-5 font-mono text-2xl;
+}
+
+.home__logo {
+  @apply absolute ml-10 opacity-50 h-1/4 mt-10;
+}
+
+.home__signUpButton {
+  @apply p-5 mt-10 shadow-gray-700 shadow-xl mx-auto bg-medium_purple w-fit rounded-xl text-white text-2xl;
+}
+
+.home__panels {
+  @apply w-fit z-10 mt-10 flex justify-around p-10;
+}
+
+.home__panel {
+  @apply flex flex-col w-1/4 p-10 text-center text-white rounded-md shadow-xl bg-dark_purple shadow-gray-900;
+}
+
+.home__image{
+  @apply  w-2/3 mt-10 mx-auto
+}
+
+.home__panel h2 {
+  @apply mb-2 text-2xl font-bold;
+}
+
+.home__panel p {
+  @apply font-serif text-xl text-justify;
+}
+
+.home__images {
+  @apply flex justify-between w-screen scale-50 bg-slate-300;
+}

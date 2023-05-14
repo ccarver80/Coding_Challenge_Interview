@@ -1,0 +1,37 @@
+/* SIGN UP MODAL */
+.signup {
+  @apply flex flex-col p-5 bg-white bg-opacity-80 rounded-xl;
+}
+
+.signup__header {
+  @apply text-2xl text-center;
+}
+
+.signup__form {
+  @apply flex flex-col w-1/2 mx-auto mt-5 text-center;
+}
+
+.signup__form form {
+  @apply flex flex-col font-bold gap-y-5;
+}
+
+.signup__button {
+  @apply p-5 mx-auto mt-5 text-center bg-medium_purple rounded-xl w-fit;
+}
+
+/* LOGIN MODAL */
+.login {
+  @apply flex flex-col p-5 bg-white bg-opacity-80 rounded-xl;
+}
+
+.login__header {
+  @apply text-2xl text-center;
+}
+
+.login__form {
+  @apply flex flex-col w-1/2 mx-auto mt-5 font-bold text-center gap-y-5;
+}
+
+.login__button {
+  @apply p-5 mx-auto mt-5 text-center bg-medium_purple rounded-xl w-fit;
+}

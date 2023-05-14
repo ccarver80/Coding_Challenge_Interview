@@ -1,0 +1,7 @@
+.Radio {
+  @apply flex flex-col mx-auto;
+}
+
+.Radio input {
+  @apply mx-auto scale-125 accent-pink-500;
+}

@@ -1,0 +1,31 @@
+.profile {
+  @apply flex flex-col justify-between mx-5 gap-x-5;
+}
+
+.profile__card {
+  @apply w-1/4 p-5 mx-auto mt-10 text-2xl text-justify border border-black rounded-xl;
+}
+
+.profile__card button {
+  @apply p-3 mt-10 text-base bg-gray-300 w-fit rounded-xl;
+}
+
+.profile__card__info {
+  @apply flex flex-col mx-auto mt-10 gap-y-10;
+}
+
+.profile__card__info h2 {
+  @apply flex flex-col;
+}
+
+.profile__activities {
+  @apply w-full mx-auto mt-10 border border-black rounded-xl;
+}
+
+.profile__activity {
+  @apply p-2 mx-auto mt-10 text-center h-fit;
+}
+
+.profile__activity a {
+  @apply text-blue-500 underline;
+}

@@ -1,0 +1,19 @@
+.table {
+  @apply w-3/4 mx-auto mb-10 text-lg text-left text-gray-700 border border-black shadow-xl shadow-gray-400 dark:text-gray-400;
+}
+
+.table__head {
+  @apply text-xs text-center text-gray-700 uppercase border border-black bg-gray-50 dark:bg-gray-700 dark:text-gray-400;
+}
+
+.table__head th {
+  @apply px-6 py-3 text-xl;
+}
+
+.table__body tr {
+  @apply text-center bg-white border border-b border-black even:bg-gray-200 shadow-black dark:bg-gray-800 dark:border-gray-700 hover:bg-pink-200 dark:hover:bg-gray-600;
+}
+
+.table__body td {
+  @apply border border-black;
+}

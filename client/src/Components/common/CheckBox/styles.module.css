@@ -1,0 +1,11 @@
+.CheckBox {
+  @apply flex self-start;
+}
+
+.CheckBox label {
+  @apply mx-auto ml-2;
+}
+
+.CheckBox input {
+  @apply self-start w-5 h-5 my-auto accent-purple-500;
+}

@@ -1,0 +1,15 @@
+.topics {
+  @apply flex flex-col;
+}
+
+.topics__header {
+  @apply mx-auto my-10 text-4xl;
+}
+
+.topics__addButton {
+  @apply flex justify-between w-3/4 mx-auto;
+}
+
+.topics__addButton button {
+  @apply p-3 mb-10 mr-5 bg-blue-300 border border-black shadow-lg rounded-xl shadow-gray-500;
+}

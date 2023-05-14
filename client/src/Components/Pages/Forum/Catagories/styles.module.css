@@ -1,0 +1,7 @@
+.forum {
+  @apply flex flex-col;
+}
+
+.forum__header {
+  @apply mx-auto my-10 text-4xl text-black;
+}

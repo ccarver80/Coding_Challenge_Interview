@@ -1,0 +1,7 @@
+.TextArea {
+  @apply flex flex-col;
+}
+
+.TextArea textarea {
+  @apply px-2 border-black border rounded-xl bg-gray-200 focus:outline-none focus:border-2 focus:border-pink-500;
+}
