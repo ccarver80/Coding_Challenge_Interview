@@ -3,5 +3,5 @@
 }
 
 .select select {
-  @apply flex h-10 px-2 bg-gray-200 w-fit;
+  @apply flex h-10 px-2 bg-gray-200 w-fit border-2 rounded border-medium_purple;
 }
