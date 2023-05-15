@@ -29,3 +29,11 @@
 .profile__activity a {
   @apply text-blue-500 underline;
 }
+
+.profile__books {
+  @apply grid grid-cols-4 gap-5 mt-10
+}
+
+.profile__book {
+  @apply flex flex-col mx-auto
+}

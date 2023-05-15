@@ -26,7 +26,6 @@ export const App = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/profile/:id" element={<PublicProfile />} />
           <Route path="/admin" element={<Admin />} />
-          
         </Route>
       </Routes>
     </div>

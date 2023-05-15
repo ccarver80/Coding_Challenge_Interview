@@ -9,12 +9,14 @@ import { useParams } from "react-router-dom";
 
 export const PublicProfile = () => {
   const [user, setUser] = useState();
+  const [library, setLibrary] = useState()
 
   const id = useParams();
   useEffect(() => {
     const post = GETAPI(`${API_URL}users/user/${id.id}`).then((res) =>
       setUser(res)
     );
+    const books = GETAPI(`${API_URL}library/books/${id.id}`).then((res) => setLibrary(res))
   }, []);
 
   return (
@@ -82,10 +84,28 @@ export const PublicProfile = () => {
                   )}
                 </div>
 
-                <div className="flex flex-col">
+                <div className="flex flex-col w-3/4 mx-auto h-3/4">
                   <h2 className="mx-auto mt-10 text-4xl font-bold">
                     My Library
                   </h2>
+                  <div className={styles.profile__books}>
+                  {library
+                    ? library.map((book) => {
+                  return (
+                    <div className={styles.profile__book}>
+                      <img
+                        className="border border-black rounded-xl"
+                        src={book.image}
+                        alt="Image of book"
+                      />
+                      <h3>Rating: {book.rating}/10</h3>
+                      <h3 className="mt-5">Review:</h3>
+                      <p>{book.review}</p>
+                    </div>
+                  );
+                })
+              : ""}
+          </div>
                 </div>
               </div>
             </div>

@@ -3,7 +3,23 @@
 }
 
 .dashboard__main {
-    @apply flex mx-auto h-full
+    @apply flex flex-col mx-auto h-full
+}
+
+.dashboard__form {
+    @apply mx-auto mb-5
+}
+
+.dashboard__form button {
+    @apply bg-blue-500 p-2 rounded-xl w-fit mt-2 text-white
+}
+
+.dashboard__books {
+    @apply grid grid-cols-5 gap-2
+}
+
+.dashboard__book {
+    @apply flex flex-col mx-auto
 }
 
 .dashboard__main input {

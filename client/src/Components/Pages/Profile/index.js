@@ -5,21 +5,27 @@ import { GETAPI, API_URL } from "../../common";
 import profile from "../../static/imgs/profileDefault.png";
 import styles from "./styles.module.css";
 import { EditProfile } from "./modal";
+import { BookModal } from "./bookModal/bookModal";
 
 export const Profile = () => {
   const [user, setUser] = useState();
   const [isModalOpen, setModalOpen] = useState(false);
+  const [isBookModalOpen, setBookModalOpen] =useState(false)
+  const [bookInfo, setBookInfo] = useState()
   const [formInput, setFormInput] = useState();
   const [placeholder, setPlaceHolder] = useState();
   const [update, setUpdate] = useState();
+  const [library, setLibrary] = useState();
 
   const id = window.sessionStorage.getItem("id");
   useEffect(() => {
     const post = GETAPI(`${API_URL}users/user/${id}`).then((res) =>
       setUser(res)
-    );
+    ); 
+    const books = GETAPI(`${API_URL}library/books/${id}`).then((res) => setLibrary(res))
   }, [update]);
 
+  console.log(library)
   return (
     <>
       <Header pageTitle={"Profile"} />
@@ -119,6 +125,28 @@ export const Profile = () => {
                 <h2 className="mx-auto mt-10 text-4xl font-bold">
                   My Library
                 </h2>
+                <div className={styles.profile__books}>
+                  {library
+                    ? library.map((book) => {
+                  return (
+                    <div className={styles.profile__book}>
+                      <img
+                        className="border border-black rounded-xl"
+                        onClick={() => {
+                          setBookModalOpen(true);
+                          setBookInfo(book);
+                        }}
+                        src={book.image}
+                        alt="Image of book"
+                      />
+                      <h3>Rating: {book.rating}/10</h3>
+                      <h3 className="mt-5">Review:</h3>
+                      <p>{book.review}</p>
+                    </div>
+                  );
+                })
+              : ""}
+          </div>
               </div>
             </div>
           </>
@@ -132,6 +160,8 @@ export const Profile = () => {
           placeholder={placeholder}
           setUpdate={setUpdate}
         />
+
+        <BookModal isModalOpen={isBookModalOpen} closeModal={() => setBookModalOpen(false)} bookInfo={bookInfo} />
       </div>
     </>
   );

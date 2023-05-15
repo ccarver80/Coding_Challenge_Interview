@@ -1,0 +1,15 @@
+.description {
+  @apply flex flex-col p-5 bg-white bg-opacity-80 rounded-xl gap-y-4;
+}
+
+.description h3 {
+  @apply text-2xl mx-auto
+}
+
+.description p {
+  @apply font-serif text-xl mx-auto
+}
+
+.description button {
+  @apply bg-blue-500 p-2 rounded-xl w-fit mt-5 mx-auto
+}
