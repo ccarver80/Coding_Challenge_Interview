@@ -11,6 +11,7 @@ export const Profile = () => {
   const [user, setUser] = useState();
   const [isModalOpen, setModalOpen] = useState(false);
   const [isBookModalOpen, setBookModalOpen] =useState(false)
+
   const [bookInfo, setBookInfo] = useState()
   const [formInput, setFormInput] = useState();
   const [placeholder, setPlaceHolder] = useState();
@@ -25,7 +26,6 @@ export const Profile = () => {
     const books = GETAPI(`${API_URL}library/books/${id}`).then((res) => setLibrary(res))
   }, [update]);
 
-  console.log(library)
   return (
     <>
       <Header pageTitle={"Profile"} />
@@ -161,7 +161,7 @@ export const Profile = () => {
           setUpdate={setUpdate}
         />
 
-        <BookModal isModalOpen={isBookModalOpen} closeModal={() => setBookModalOpen(false)} bookInfo={bookInfo} />
+        <BookModal isModalOpen={isBookModalOpen} closeModal={() => setBookModalOpen(false)} bookInfo={bookInfo} setUpdate={setUpdate} />
       </div>
     </>
   );

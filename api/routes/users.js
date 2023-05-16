@@ -9,7 +9,7 @@ const { verifyToken } = require("../middleware/verify");
 const prisma = new PrismaClient();
 
 router.post("/verify", verifyToken, async (req, res) => {
-  res.status(201).json({ Message: "JFJFJFJFJ" });
+  res.status(201).json({ Message: "verified" });
 });
 
 router.post("/login", async (req, res, next) => {

@@ -55,7 +55,7 @@ export const EditProfile = ({
               register={register}
               name="hobbies"
               label="Hobbies:"
-              placeholder={placeholder}
+              defaultValue={placeholder}
             />
           ) : (
             <TextInput
