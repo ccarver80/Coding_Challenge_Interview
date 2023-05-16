@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { set, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import {
   Modal,
@@ -8,7 +7,6 @@ import {
   API_URL,
   Toast,
   TextArea,
-  GETAPI,
 } from "../../../common";
 import styles from "./styles.module.css";
 
@@ -16,9 +14,6 @@ import styles from "./styles.module.css";
 export const BookModal = ({ bookInfo, isModalOpen, closeModal, setUpdate}) => {
   const { register, handleSubmit } = useForm();
 
-  
-  
-  
   const onSubmit = async (data) => {
     data.user_id = window.sessionStorage.getItem("id");
     data.book_id = bookInfo.rec_id;
@@ -34,14 +29,14 @@ export const BookModal = ({ bookInfo, isModalOpen, closeModal, setUpdate}) => {
       closeModal();
     }
   };
-  console.log(book)
+
   return (
     
     <Modal isModalOpen={isModalOpen} closeModal={closeModal} maxWidth="1000px">
       <div className={styles.description}>
-
+        
         <form onSubmit={handleSubmit(onSubmit)}>
-          {/* <img className="mx-auto" src={bookInfo ? bookInfo.image : ''} alt="Photo of book" /> */}
+          <img className="mx-auto" src={bookInfo ? bookInfo.image : ''} alt="book" /> 
           <div className="w-1/4 mx-auto">
           <TextInput
             type="number"
@@ -49,14 +44,14 @@ export const BookModal = ({ bookInfo, isModalOpen, closeModal, setUpdate}) => {
             register={register}
             label="Rating out of 10"
             name="rating"
-            defaultValue={bookInfo ? bookInfo.rating : ''}
+            
           />
           <TextArea
             register={register}
             label="Write a review"
             rows="5"
             name="review"
-            // placeholder={bookInfo ? bookInfo.review : ''}
+           
           />
           <button>Submit</button></div>
         </form>
