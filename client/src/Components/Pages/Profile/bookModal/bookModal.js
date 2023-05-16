@@ -15,13 +15,8 @@ import styles from "./styles.module.css";
 
 export const BookModal = ({ bookInfo, isModalOpen, closeModal, setUpdate}) => {
   const { register, handleSubmit } = useForm();
-  const [book, setBook] = useState()
 
-  if(bookInfo){
-    
-    const book= GETAPI(`${API_URL}library/book/${bookInfo.rec_id}`).then((res) => setBook(res))
   
-  }
   
   
   const onSubmit = async (data) => {
