@@ -1,16 +1,35 @@
 # Coschedual_code_challange_2
 
-## Instructions 
+## About
+I took on a challenging project as part of a job interview, where I had just one week to develop a full-stack application. The task was to create an application using a set of specified APIs, and I chose to work with the NY Times API. 
 
+The concept behind my project was to build a "Book Club" app, allowing users to log in, search for NY Times articles by category, and add selected books to their personal collection. 
+
+While the project isn't yet complete and there are some loose ends to tie up, I intentionally decided to leave it in its current state. I believe this reflects my abilities as a developer under pressure. This project showcases my dedication and what I can achieve when working within tight timelines. It demonstrates my commitment to problem-solving and my willingness to take on challenges head-on.
+
+## Technology 
+* Javascript
+* React
+* Express
+* Prisma w/sqlite
+  
+
+## Instructions 
+* Clone repo to your computer
+* Open Terminal
    ### Inside Api folder 
-1. Open api directory and run `npm install` to install dependancies
-2. Locate the .env file in the root api directory and add your API_KEY from https://developer.nytimes.com/apis
-3. Run command `npx prisma migrate dev --name init` this will create a sqlite database, **It may take a few minutes to run the seed.js file**
-4. Run command `npm start` to start the server
+1. Navigate to the API directory and run the following command `npm install` to install the project dependencies:
+2. In the root directory of the API, locate the .env file and add your API_KEY obtained from https://developer.nytimes.com/apis
+3. Run the following command 'npx prisma migrate dev --name init` to create a SQLite database (Note: This may take a few minutes to run the seed.js file):
+4. Finally, start the server by running: `npm start`
+5. This will start the server running on port 3001
 
     ### Inside Client folder
-5. In a seperate terminal open client directory and run `npm install` to install dependancies
-6. run command `npm start` to start the app 
+* Continuing with the setup of your project, follow these additional steps:
+7. Open a separate terminal and navigate to the "client" directory within your project. Run the following command `npm install` to install the client-side dependencies:
+8. Once the dependencies are installed, start the app by running the following command in the same terminal: `npm start`
+9. This will start the client side running on port 3000
+10. Open up a web browser and navigate to `localhost:3000` to run the application
 
 
 ## Application Instructions
@@ -37,4 +56,5 @@
 13. The seed file created 100 random users from https://www.randomuser.me API
 14. Each Catagory was seeded with 11 random post using the https://uselessfacts.jsph.pl/api/v2/facts/random" API
 15. Each Post was seeded with 11 random comments using the same useless facts API 
-16. Feel free to create your own post or add a comment to one. 
+16. Feel free to create your own post or add a comment to one.
+
