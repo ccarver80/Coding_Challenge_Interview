@@ -14,7 +14,7 @@ While the project isn't yet complete and there are some loose ends to tie up, I 
 * Prisma w/sqlite
   
 
-## Instructions 
+## Setup Instructions 
 * Clone repo to your computer
 * Open Terminal
    ### Inside Api folder 
