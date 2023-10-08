@@ -15,14 +15,15 @@ While the project isn't yet complete and there are some loose ends to tie up, I 
   
 
 ## Setup Instructions 
-* Clone repo to your computer
+* Clone repository to your computer
 * Open Terminal
    ### Inside Api folder 
 1. Navigate to the API directory and run the following command `npm install` to install the project dependencies:
 2. In the root directory of the API, locate the .env file and add your API_KEY obtained from https://developer.nytimes.com/apis
-3. Run the following command 'npx prisma migrate dev --name init` to create a SQLite database (Note: This may take a few minutes to run the seed.js file):
-4. Finally, start the server by running: `npm start`
-5. This will start the server running on port 3001
+3. **WARNING!! If you plan on making a branch of your own, Please add the .env file to the gitignore file to keep your API_Key off of a public repository**
+4. Run the following command 'npx prisma migrate dev --name init` to create a SQLite database (Note: This may take a few minutes to run the seed.js file):
+5. Finally, start the server by running: `npm start`
+6. This will start the server running on port 3001
 
     ### Inside Client folder
 * Continuing with the setup of your project, follow these additional steps:
